@@ -13,7 +13,7 @@ EXIT = "exit"
 def pager_options ():
     return [PREV, NEXT, REFR, EXIT]
 
-def pickpaged (options, skip=0, limit=10, title="", indicator='*', index=0, originalSkip=0):
+def pickpaged (options, skip=0, limit=10, index=0, title="", indicator='*', originalSkip=0):
     """Construct and start a :class:`Picker <Picker> in a paged fashion`.
 
     Usage::
@@ -22,7 +22,8 @@ def pickpaged (options, skip=0, limit=10, title="", indicator='*', index=0, orig
       >>>
       >>> title = 'Please choose an option: '
       >>> skip = 0
-      >>> limit = 2
+      >>> limit = 2 # Two options per page
+      >>> index = 0 # Which index to start cursor at
       >>> options = ['option1', 'option2', 'option3', 'option4', 'option5']
       >>> while True:
       >>>     options = getPage(skip, limit) # Your custom routine to get the options for the page
