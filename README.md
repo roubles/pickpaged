@@ -21,7 +21,7 @@ pickpacked is a wrapper around [pick](https://github.com/wong2/pick) that helps 
       >>> options = ['option1', 'option2', 'option3', 'option4', 'option5']
       >>> while True:
       >>>     options = getPage(skip, limit) # Your custom routine to get the options for the page
-      >>>     option, index, skip = pickpaged.pickpaged(options, skip, limit, title)
+      >>>     option, index, skip = pickpaged.pickpaged(options, skip, limit, index, title)
       >>>     if option not in pickpaged.pager_options:
       >>>         # This is a valid option (not NEXT, PREV, REFR or EXIT)
       >>>         # Your code to work on the selected option goes here

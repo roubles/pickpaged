@@ -5,10 +5,10 @@ import curses
 import traceback
 from pick import pick
 
-PREV = "previous page" 
-NEXT = "next page"
-REFR = "refresh"
-EXIT = "exit"
+PREV = "<< previous page" 
+NEXT = ">> next page"
+REFR = "<> refresh"
+EXIT = "!! Exit"
 
 def pager_options ():
     return [PREV, NEXT, REFR, EXIT]
